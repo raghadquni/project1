@@ -1,5 +1,5 @@
 
-const meals = JSON.parse(localStorage.getItem("meals"))
+/* const meals = JSON.parse(localStorage.getItem("meals"))
 
 const myFav = meals.filter((item) => item.inFav === true);
 
@@ -61,7 +61,6 @@ const renderFav = ()=>{
 
 
 
-/*
     const removeFav = () => {
         myFav.forEach((meal, i) => {
             $(".favo").remove();

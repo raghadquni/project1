@@ -1,0 +1,58 @@
+body {
+    margin: 0%;
+    margin-right: 0%;
+}
+header {
+    background-color: rgba(177, 143, 143, 0.068);
+    padding: 0.2rem;
+
+}
+
+.hed h1{
+    color: rgb(202, 20, 20);
+    padding: 0% 0%;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 50px 0px 10px;
+    display: flex;
+    justify-content: center;
+    font-size: 5rem;
+}
+
+
+.hed ul {
+    list-style-type:none;
+    display: flex;
+    justify-content: center;
+    padding: 0px 10px 0px 10px;
+}
+
+.hed li {
+    display: inline-block;
+	padding: 14px 11px;
+	font-size: 1rem;
+    color: rgb(202, 20, 20);
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.hedlink {
+    text-decoration: none;
+    color: rgb(202, 20, 20);
+    transition: 0.9s;
+}
+
+.hedlink:hover {
+    color: orangered;
+    
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+}
+
+
+.wrapper {
+    display:inline-block;
+    display: flex;
+    justify-content: center;
+}

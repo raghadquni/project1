@@ -1,18 +1,21 @@
 .favo {
     width: 40%;
-    height: 80%;
-    display: block;
-    margin: 10% 27%;
-    
+    height: 100%;
+    margin: 3rem auto 0;
    
+}
+
+
+.wrapperfav {
+    width: 100%;
 }
 
 
 .cardfood {
     width: 100%;
     margin-right: 3rem;
-    margin-bottom: 150px;
-	padding: 0px 50px;
+    margin-bottom: 3rem;
+	padding: 2rem 50px;
     border: 1px solid #c9c9c9;
     border-radius: 7px;
     box-shadow: 5px 5px 0px 0px rgb(202, 20, 20) inset; 
@@ -33,7 +36,7 @@
 }
 
 .description, .Ingredients {
-    color: rgb(209, 85, 85);
+    color: rgb(202, 20, 20);
 }
 
 
@@ -58,5 +61,6 @@
     margin: 0px 45% 13px;
     
 }
-    
+
+  
 

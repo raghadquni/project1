@@ -1,13 +1,11 @@
 
 
-
-
 let  meals = JSON.parse(localStorage.getItem("fav")) || [
   {
     id: 0,
     name: "'Apple pie' porridge",
     inFav: false,
-    img: "ApplePie.jpeg",
+    img: 'ApplePie.jpeg',
     description:
       "Serves: 1 adult, Preparation time: 10 minutes, Cooking time: 5 minutes, Calories per portion: 315kcal (1,318kJ)",
     ingredients: [
@@ -134,91 +132,108 @@ let  meals = JSON.parse(localStorage.getItem("fav")) || [
     ],
     type: "lunch",
   },
+  {
+    id: 5,
+    name: "San choy bau",
+    inFav: false,
+    img: "Sanchoybau.jpeg",
+    description:
+      "Serves: 4 adults, Preparation time: 15 minutes, Cooking time: 6 minutes, Calories per portion: 305kcal (1,278kJ)",
+    ingredients: [
+      "1 tbsp peanut oil",
+      "2 garlic cloves, crushed",
+      "2cm piece ginger, finely grated",
+      "500g lean pork mince",
+      "1 tbsp soy sauce",
+      "2 tbsp oyster sauce",
+      "3 shallots, thinly sliced",
+      "1/2 lime, juiced.",
+      "1 tsp sesame oil.",
+      "1 cup beansprouts, trimmed",
+      "12 large lettuce leaves",
+      "1/4 cup fresh coriander leaves",
+      "1/4 cup chopped roasted peanuts, optional.",
+    ],
+    method: [
+      "Heat wok over high heat until hot. Add peanut oil and swirl to coat. Add garlic, ginger and pork. Stir-fry for 2 to 3 minutes or until pork just changes colour.",
+      "Add soy sauce and oyster. Add shallots, 2 teaspoons of lime juice and sesame oil to wok. Stir-fry for 3 minutes or until heated through. Stir in beansprouts. ",
+      "Spoon pork mixture into lettuce leaves. Sprinkle with coriander and peanuts, if using. Serve.",
+    ],
+    type: "dinner",
+  },
+  {
+    id: 6,
+    name: "Healthy tacos",
+    inFav: false,
+    img: "SmokeyTaco.webp",
+    description:
+      "Serves: 4 adults, Preparation time: 15 minutes, Cooking time: 15 minutes, Calories per portion: 460kcal (1,278kJ)",
+    ingredients: [
+      "red onion 1, thinly sliced",
+      "cider vinegar 75ml",
+      "ground cumin 1 tsp",
+      "chipotle flakes 1 tsp",
+      "sweet smoked paprika 2 tsp",
+      "olive oil 2½ tbsp",
+      "garlic 2 cloves, finely chopped",
+      "black beans 400g can, rinsed and drained",
+      "coriander a large handful.",
+      "dairy-free yogurt 120g",
+      "lime 1, juiced",
+      "corn tortillas 8 small",
+      "salad leaves 150g",
+      "avocado 1 small, thinly sliced",
+    ],
+    method: [
+      "Combine the onion and vinegar in a small bowl with a pinch of salt and set aside. Mix the paprika, cumin, chipotle flakes and 2 tbsp of olive oil in a large bowl, seasoning well. Add the courgettes and toss together until coated. Put a large frying pan on a medium-high heat and, once hot, add the courgettes – you will probably need to do this in two or three batches. Cook on each side for 2-3 minutes or until deep in colour and charred, then transfer to a plate lined with kitchen paper. Cover and set aside.",
+      "Without cleaning the frying pan, add the remaining oil. Cook the garlic for 30 seconds, then add the black beans with a splash of water, cooking through for a few minutes until just warm and the water has evaporated. Season to taste, cover and set aside. ",
+      "Finely chop half the coriander and put in a bowl along with the yogurt, lime juice and zest, mix together and season to taste. Heat the tortillas according to pack instructions.",
+      "Strain the pickled onions. When it’s time to build your tacos, layer the tortillas with the salad leaves and avocado. Sprinkle over the black beans and top with the courgettes, a drizzle of the herby lime yogurt and some of the pickled onions. Garnish with the remaining coriander (you can keep as is, or roughly chop if you’d prefer) and serve with the lime wedges to squeeze over.",
+    ],
+    type: "dinner",
+  }
 ];
-
-// let fav = JSON.parse(localStorage.getItem("fav")) || []; // empty array
-
-
-// function favourite() {
-//   fav.forEach((meal, i) => {
-//     $(".favo").append(
-//         `<div class="cardfood">
-//         <p class="nameP"> ${meal.name}</p>
-//         <img src="${meal.img}" alt="IT" class="Img">
-//         <p class="description">${meal.description}</p>
-    
-    
-//         <div id= 'Ingredients-${i}'> 
-//         <p class="Ingredients"> Ingredients </p>
-//         <ul id='ul-${i}'>   </ul>
-//         </div> 
-    
-//         <div id ='description-${i}'>
-//         <p class="description"> Method </p>
-//         <ol id= 'ol-${i}'>  </ol>
-//         </div>
-      
-//         <div>
-//         <button class ="like" id="fav-${i}"><i class="heart fa fa-heart-o"></i></button>
-//         </div>`
-//       );    
-      
-//       meal.ingredients.forEach((item, index1) => {
-//         $("#ul-" + i).append(`<li> ${item} </li>`);
-//       });
-    
-//       meal.method.forEach((item, index) => {
-//         $("#ol-" + i).append(`<li> ${item}</li>`);
-
-//       });
-
-//     })
-
-// }
-
-// favourite(); 
-
-
-$('#sear').click(function() {
-    const inp = $('#fsearch').val();
-    if ($("#fsearch").val().length == 0) {
-        alert ("add meal to search");
-        }
-        else {
-    alert("th");
-}
-})
 
 
 /////////////////////////////////////////////////////// breakfast render////////////////////////////
 
 function myFunction() {
   $(".homePageD").hide()
-  const breakfast = meals.filter((item) => item.type === "breakfast");
+  $(".breakfastCard").show()
+  $(".dinnerCard").hide()
+  $(".lunchCard").hide()
+  let breakfast = meals.filter((item) => item.type === "breakfast");
+             console.log(breakfast);
 
   const renderBreakFast = () => {
+    breakfast = meals.filter((item) => item.type === "breakfast");
     $(".breakfastCard").html("")
     breakfast.forEach((meal, i) => {
       $(".breakfastCard").append(
         `<div class="cardfood">
         <p class="nameP"> ${meal.name}</p>
         <img src="${meal.img}" alt="IT" class="Img">
-        <p class="description">${meal.description}</p>
+        <p class="descriptionF">${meal.description}</p>
         <div id= 'Ingredients-${i}'> 
-        <p class="Ingredients"> Ingredients </p>
+        <p class="Ingredients"> Ingredients: </p>
         <ul id='ul-${i}'>   </ul>
         </div> 
     
         <div id ='description-${i}'>
-        <p class="description"> Method </p>
+        <p class="description"> Method: </p>
         <ol id= 'ol-${i}'>  </ol>
         </div>
       
         <div>
-        <button type = "button" class ="like" id="fav-${i}"><i class="heart fa fa-heart-o"></i></button>
+        <button type = "button" class ="like" id="fav-${i}"><i id="emptyHeart" class="heart fa fa-heart-o"></i>Add to Favorite</button>
         </div>
         </div>`
       );
+
+      if (meal.inFav === true) {
+        $("#fav-" + i).html(` <i id='fullHeart' class="fas fa-heart"></i>
+        remove from Favorite`);
+      }
   
       meal.ingredients.forEach((item, index1) => {
         $("#ul-" + i).append(`<li> ${item} </li>`);
@@ -227,12 +242,19 @@ function myFunction() {
         $("#ol-" + i).append(`<li> ${item}</li>`);
       });
 
-  //   $("#fav-"+i).click(()=>{
-  //       console.log(i);
-  //       meals[i].inFav = !meals[i].inFav 
-  //       localStorage.setItem("meals",JSON.stringify(meals))
-  //     //   renderBreakFast()
-  //   })
+   $("#fav-"+i).click(()=> {
+    //   console.log(i);
+       meals = meals.map((ee) => {
+         if(meal.id === ee.id ) {
+           return { ...ee, inFav : !ee.inFav }
+         } else {
+           return ee;
+         }
+       })
+       
+      localStorage.setItem("fav",JSON.stringify(meals))
+      renderBreakFast()
+    })
     
     });
 
@@ -244,9 +266,16 @@ function myFunction() {
 
 function myFunction2() {
   $(".homePageD").hide()
-  const lunch = meals.filter((item) => item.type === "lunch");
+  $(".breakfastCard").hide()
+  $(".dinnerCard").hide()
+  $(".lunchCard").show()
+
+
+  let lunch = meals.filter((item) => item.type === "lunch");
 
   const renderLunch = () => {
+    lunch = meals.filter((item) => item.type === "lunch");
+
     $('.lunchCard').html("")
     lunch.forEach((meal, i) => {
       console.log(meal);
@@ -254,7 +283,7 @@ function myFunction2() {
         `<div class="cardfood">
         <p class="nameP"> ${meal.name}</p>
         <img src="${meal.img}" alt="IT" class="Img">
-        <p class="description"> ${meal.description} </p>
+        <p class="descriptionF"> ${meal.description} </p>
        
         <div id= 'Ingredients-${i}'> 
         <p class="Ingredients"> Ingredients </p>
@@ -267,10 +296,15 @@ function myFunction2() {
         </div>
     
         <div>
-        <button class ="like" id="fav-${i}"><i class="heart fa fa-heart-o"></i></button>
+        <button type = "button" class ="like" id="fav-${i}"><i class="heart fa fa-heart-o"></i>Add to Favorite</button>
         </div>
-      </div>`
+        </div>`
       );
+
+      if (meal.inFav === true) {
+        $("#fav-" + i).html( `<i class="fas fa-heart"></i>
+        remove from Favorite`);
+      }
     
       meal.ingredients.forEach((item, index1) => {
         $("#ul-" + i).append(`<li> ${item} </li>`);
@@ -280,13 +314,103 @@ function myFunction2() {
         $("#ol-" + i).append(`<li> ${item}</li>`);
       });
     
-      //   $(".heart.fa").click(function () {
-      //     fav.push(meal);
-      //     localStorage.setItem("fav", JSON.stringify(fav));
-      //     $(this).toggleClass("fa-heart fa-heart-o");
-      //     favourite ();
-      //   });
+      $("#fav-"+i).click(()=> {
+        //   console.log(i);
+           meals = meals.map((ee) => {
+             if(meal.id === ee.id ) {
+               return { ...ee, inFav : !ee.inFav }
+             } else {
+               return ee;
+             }
+           })
+           
+          localStorage.setItem("fav",JSON.stringify(meals))
+          renderLunch()
+        })
     });
   } 
   renderLunch();
 }
+
+
+
+/////////////////////////////////////////////////////// dinner render ////////////////////////////
+
+function myFunction3() {
+  $(".homePageD").hide()
+  $(".breakfastCard").hide()
+  $(".dinnerCard").show()
+  $(".lunchCard").hide()  
+  
+  let dinner = meals.filter((item) => item.type === "dinner");
+
+  const renderDinner = () => {
+    $('.dinnerCard').html("")
+    dinner.forEach((meal, i) => {
+      console.log(meal);
+      $(".dinnerCard").append(
+        `<div class="cardfood">
+        <p class="nameP"> ${meal.name}</p>
+        <img src="${meal.img}" alt="IT" class="Img">
+        <p class="descriptionF"> ${meal.description} </p>
+       
+        <div id= 'Ingredients-${i}'> 
+        <p class="Ingredients"> Ingredients </p>
+        <ul id='ul-${i}'>   </ul>
+        </div> 
+    
+        <div id ='description-${i}'>
+        <p class="description"> Method </p>
+        <ol id= 'ol-${i}'>  </ol>
+        </div>
+    
+        <div>
+        <button type = "button" class ="like" id="fav-${i}"><i class="heart fa fa-heart-o"></i>Add to Favorite</button>
+        </div>
+        </div>`
+      );
+
+      if (meal.inFav === true) {
+        $("#fav-" + i).text("remove from Favorite");
+      }
+    
+      meal.ingredients.forEach((item, index1) => {
+        $("#ul-" + i).append(`<li> ${item} </li>`);
+      });
+    
+      meal.method.forEach((item, index) => {
+        $("#ol-" + i).append(`<li> ${item}</li>`);
+      });
+      $("#fav-"+i).click(()=> {
+        //   console.log(i);
+           meals = meals.map((ee) => {
+             if(meal.id === ee.id ) {
+               return { ...ee, inFav : !ee.inFav }
+             } else {
+               return ee;
+             }
+           })
+           
+          localStorage.setItem("fav",JSON.stringify(meals))
+          renderDinner()
+        })
+    });
+  } 
+  renderDinner();
+}
+
+
+
+/////////////////////////////////////////////////////// search function ////////////////////////////
+
+
+
+/*$('#sear').click(function() {
+  const inp = $('#fsearch').val();
+  if ($("#fsearch").val().length == 0) {
+      alert ("add meal to search");
+      }
+      else {
+        $("#fsearch").val()
+}
+}) */

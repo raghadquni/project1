@@ -1,5 +1,5 @@
 
-/* const meals = JSON.parse(localStorage.getItem("meals"))
+const meals = JSON.parse(localStorage.getItem("fav"))
 
 const myFav = meals.filter((item) => item.inFav === true);
 
@@ -7,7 +7,7 @@ const myFav = meals.filter((item) => item.inFav === true);
 console.log(myFav);
 
 
-const renderFav = ()=>{
+const renderFav = ()=> {
     myFav.forEach((meal, i) => {
         $(".favo").append(
             `<div class="cardfood">
@@ -25,16 +25,15 @@ const renderFav = ()=>{
             <div id ='description-${i}'>
             <p class="description"> Method </p>
             <ol id= 'ol-${i}'>  </ol>
-            </div>
+            </div> `
+          );
           
-            `
-          );    
 
-          if(meal.inFav === false){
-            $("#fav-"+i).text("Add to Favorite")
+          if (meal.inFav === false) {
+            $("#fav-" + i).text("Add to Favorite");
           }
-          
-          
+
+
           meal.ingredients.forEach((item, index1) => {
             $("#ul-" + i).append(`<li> ${item} </li>`);
           });
@@ -67,4 +66,4 @@ const renderFav = ()=>{
         })
     }
 
-    */
+    

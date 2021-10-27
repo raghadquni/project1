@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,81 +8,95 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="homePage.css">
-</head>
+    <script
+      src="https://kit.fontawesome.com/fea08db294.js"
+      crossorigin="anonymous"
+    ></script>
+
 <body>
     <div class="wrapper">
-    <header class = "hed">
-        <h1> HEALTHY FOOD </h1>
-        <div>
-        <ul class="headerList">
-            <li> <a href="homePage.html" class="hedlink"> Home </a></li>
-            <li> <a href="#" class="hedlink">About</a></li>
-            <li> <a href="#" class="hedlink">Contant</a></li>
-            <li> <i class="fa fa-heart"></i> <a href="favorite.html" class="hedlink"> your fav foods </a> </li>
-        </ul>
+        <header class="hed">
+            <h1> HEALTHY FOOD </h1>
+            <div>
+                <ul class="headerList">
+                    <li> <a href="homePage.html" class="hedlink"> Home </a></li>
+                    <li> <a href="About.html" class="hedlink">About</a></li>
+                    <li> <a href="contact.html" class="hedlink">Contact</a></li>
+                    <li> <i class="fa fa-heart"></i> <a href="favorite.html" class="hedlink"> Favorite</a> </li>
+                </ul>
+            </div>
+
+            <div class="search">
+                <input type="search" name="fsearch" id="fsearch" placeholder="Search for meals..">
+                <button type="button" id="sear">SEARCH</button>
+            </div>
+        </header>
+
+        <div class="homePageD">
+
+
+            <div class="banner">
+                <p>WELCOME TO HEALTHY LIFE </p>
+                <h4>“To ensure good health: eat lightly, breathe deeply, live moderately, cultivate cheerfulness, and
+                    maintain an interest in life.” <br> -William Londen </h4>
+
+            </div>
+
+            <div class="Aboutcard">
+
+                <div class="card">
+
+                    <h2 id="title">BREAKFAST</h2>
+                    <p id="whatis">Breakfast is often called ‘the most important meal of the day’, and for good reason.
+                        As the name suggests, breakfast breaks the overnight fasting period. It replenishes your supply
+                        of glucose to boost your energy levels and alertness, while also providing other essential
+                        nutrients required for good health</p>
+                    <p class="see">Let's see a lot of healthy easy breakfast foods</p>
+                    <button type="button" class="btn" onclick="myFunction()">HERE</button>
+                </div>
+
+
+                <div class="card">
+
+                    <h2 id="title">LUNCH</h2>
+                    <p id="whatis">It provides energy and nutrients to keep the body and brain working through the
+                        afternoon. According to experts, lunch provides nourishment to the body and brain and reduces
+                        stress and eating lunch provides a break from the activities of the day and gives energy for the
+                        rest of the afternoon.</p>
+                    <p class="see">Let's see a lot of healthy easy breakfast foods</p>
+                    <button type="button" class="btn" onclick="myFunction2()">HERE</button>
+                </div>
+
+
+                <div class="card">
+
+                    <h2 id="title">Dinner</h2>
+                    <p id="whatis">Eating a healthy and light dinner will help your body maintain its levels and
+                        functions. ... Also, dinner is important because after a long day full of activities and
+                        exertion, your body needs to fuel up. It is unhealthy if you skip your dinner or consume way too
+                        much for dinner. So, the key is to maintain balance.</p>
+                    <p class="see">Let's see a lot of healthy easy breakfast foods</p>
+                    <button type="button" class="btn" onclick="myFunction3()">HERE</button>
+                </div>
+
+            </div>
+        </div>
+
     </div>
 
-    <div class="search">
-        <input type="search" name="fsearch" id="fsearch">
-        <button type="button" id="sear">SEARCH</button>
-    </div>
-    </header>
 
-    <div class="homePageD">
+    <div class="breakfastCard"></div>
+    <div class="lunchCard"></div>
+    <div class="dinnerCard"></div>
 
-    
-    <div class="banner">
-        <p>WELCOME TO HEALTHY LIFE </p>
-        <h4>“To ensure good health: eat lightly, breathe deeply, live moderately, cultivate cheerfulness, and maintain an interest in life.” <br> -William Londen </h4>
-        
-    </div>
+    <footer class="footer">
+        <p class="fotterp"><b>© All rights reserved to HELTHYFOOD 2021.</b></p>
+    </footer>
 
-
-    <div class= "Aboutcard">
-        <div class="card">
-        
-            <h2 id="title">breakfasts</h2>
-            <p id="whatis">Breakfast is often called ‘the most important meal of the day’, and for good reason. As the name suggests, breakfast breaks the overnight fasting period. It replenishes your supply of glucose to boost your energy levels and alertness, while also providing other essential nutrients required for good health.</p>
-            <p class="see">Let's see a lot of healthy easy breakfast foods</p>
-            <button type="button" class="btn" onclick="myFunction()">HERE</button>
-       </div>
-
-       <div class="card">
-        
-        <h2 id="title">LUNCH</h2>
-        <p id="whatis">It provides energy and nutrients to keep the body and brain working through the afternoon. According to experts, lunch provides nourishment to the body and brain and reduces stress and eating lunch provides a break from the activities of the day and gives energy for the rest of the afternoon.</p>
-        <p class="see">Let's see a lot of healthy easy breakfast foods</p>
-        <button type="button" class="btn" onclick="myFunction2()">HERE</button>
-       </div>
-
-
-       <div class="card">
-        
-        <h2 id="title">Dinner</h2>
-        <p id="whatis">Eating a healthy and light dinner will help your body maintain its levels and functions. ... Also, dinner is important because after a long day full of activities and exertion, your body needs to fuel up. It is unhealthy if you skip your dinner or consume way too much for dinner. So, the key is to maintain balance.</p>
-        <p class="see">Let's see a lot of healthy easy breakfast foods</p>
-        <button type="button" class="btn" onclick="myFunction3()">HERE</button>
-       </div>
-
-
-       
-       
-
-       </div>
-    </div>
-</div>
-
-<div class="breakfastCard"></div>
-<div class="lunchCard"></div>
-
-<div class="footer">
-<footer class="fot">
-    <p> © All rights reserved to HELTHYFOOD 2021. </p>   
-</footer>
-
-</div>
-<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-<script src="project1.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="project1.js"></script>
 
 </body>
+
 </html>

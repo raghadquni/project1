@@ -40,19 +40,3 @@ header {
     transition: 0.9s;
 }
 
-.hedlink:hover {
-    color: orangered;
-    
-}
-
-.search {
-    display: flex;
-    justify-content: center;
-}
-
-
-.wrapper {
-    display:inline-block;
-    display: flex;
-    justify-content: center;
-}

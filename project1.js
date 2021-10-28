@@ -405,7 +405,7 @@ function myFunction3() {
 
 
 
-/*$('#sear').click(function() {
+$('#sear').click(function() {
   const inp = $('#fsearch').val();
   if ($("#fsearch").val().length == 0) {
       alert ("add meal to search");
@@ -413,4 +413,4 @@ function myFunction3() {
       else {
         $("#fsearch").val()
 }
-}) */
+}) 
